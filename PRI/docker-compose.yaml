@@ -1,0 +1,35 @@
+services:
+  # PHP + Apache
+  php-apache:
+    build:
+      dockerfile: dockerfiles/dockerfile
+    volumes:
+      - ./www:/var/www
+    ports:
+      - 8080:80 # port 8000
+    depends_on:
+      - database
+
+  # database
+  database:
+    build:
+      dockerfile: dockerfiles/database
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pri
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: secret
+    ports:
+      - 9906:3306
+
+  # administrace databáze
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: 'Phpmyadmin-pri'
+    depends_on:
+      - database
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=database
+    ports:
+      - '8000:80'

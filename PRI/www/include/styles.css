@@ -1,0 +1,95 @@
+.login-form-div {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-div .login-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-div .login-form label {
+    font-family: monospace;
+    font-size: 24px;
+    margin-bottom: 10px; 
+}
+
+.login-form-div .login-form input[type="text"],
+.login-form-div .login-form input[type="password"] {
+    font-family: monospace;
+    font-size: 24px;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+    width: 100%; 
+    margin-bottom: 20px; 
+}
+
+.login-form-div .login-form button {
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: lightgreen;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+.login-form-div .login-form input[type="text"]:hover
+{
+    background-color: rgba(128, 128, 128, 0.5);
+    transition-duration: 0.5s;
+}
+
+
+.login-form-div .login-form input[type="password"]:hover
+{
+    background-color: rgba(128, 128, 128, 0.5);
+    transition-duration: 0.5s;
+}
+
+
+.login-form-div .login-form button:hover
+{
+    background-color: rgb(6, 206, 6);
+    transition-duration: 0.5s;
+    width: 50%;
+}
+
+.footer-object {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; 
+    color: #fff;
+    text-align: center;
+    padding: 10px 0; 
+    font-family: monospace;
+}
+
+.navigace-list li {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: monospace;
+    align-items: center;
+}
+
+.navigace-odkaz {
+    text-decoration: none; 
+    color: #333; 
+    font-weight: bold;
+    padding: 5px 10px; 
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: background-color 0.5s ease;
+}
+
+.navigace-odkaz:hover {
+    background-color: #ccc; 
+}
