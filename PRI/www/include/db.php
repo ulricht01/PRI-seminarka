@@ -42,4 +42,19 @@ function login(mysqli $conn, string $username, string $password): bool
     return false;
 }
 
+function infoPokoje(mysqli $conn): array
+{
+    $query = "SELECT * from pokoje";
+    $result = dbQuery($conn, $query);
+
+    $data = [];
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()){
+            $data[] = $row;
+
+        }
+    }
+    return $data;
+}
+
 ?>

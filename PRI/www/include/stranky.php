@@ -3,4 +3,5 @@
 $pages = [
     '/' => 'Home',
     '/login.php' => 'Přihlášení',
+    '/rooms.php' => 'Pokoje',
 ];

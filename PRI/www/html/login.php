@@ -11,4 +11,4 @@ require INC . '/begin.php';
     <button type="submit" id="submit-button" name="submit-button">Přihlásit</button>
 </form>
 </div>
-<?php require INC . '/end.php';
+<?php require INC . '/end.php'?>

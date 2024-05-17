@@ -3,3 +3,4 @@ FROM mysql
 
 # inicializace databáze
 ADD ./dockerfiles/db.sql /docker-entrypoint-initdb.d
+ADD ./dockerfiles/insert.sql /docker-entrypoint-initdb.d

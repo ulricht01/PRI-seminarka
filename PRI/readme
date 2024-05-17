@@ -1,0 +1,11 @@
+- Javascript pro:
+    - Uklizeno/Obsazeno
+    - Obsazený/neobsazený pokoj (v db se bude hlídat datum prijezdu/odjezdu):
+        - Pokud bude aktuální datum mezi prijezdem a odjezdem -> Obsazeno
+        - Pokud bude aktuální datum mimo -> Neobsazeno
+        - Podle obsazeno/neobsazeno bude barva pokoje červená/zelená
+
+- Po rozkliknutí úkolu se zobrazí stránka s úpravou:
+    - Zaškrtnutí uklizeno/obsazeno: Ano/ne
+
+- Nastavit render stránky po rozkliknutí úkolu podle id
