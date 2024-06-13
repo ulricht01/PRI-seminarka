@@ -5,7 +5,4 @@
         - Pokud bude aktuální datum mimo -> Neobsazeno
         - Podle obsazeno/neobsazeno bude barva pokoje červená/zelená
 
-- Po rozkliknutí úkolu se zobrazí stránka s úpravou:
-    - Zaškrtnutí uklizeno/obsazeno: Ano/ne
 
-- Nastavit render stránky po rozkliknutí úkolu podle id
