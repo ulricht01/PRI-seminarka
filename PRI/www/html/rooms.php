@@ -9,7 +9,7 @@ $i = 1;
 <div class="wrapper">
     <div class="grid-container">
         <?php foreach ($data as $item): ?>
-        <a class="grid-item" href="<?php echo $i++ ?>">
+        <a class="grid-item" href="room.php?roomNumber=<?php echo $i++ ?>">
             <div class="room-number">Pokoj:<?php echo htmlspecialchars($item['cislo_pokoje']); ?></div>
             <div class="floor">Patro:<?php echo htmlspecialchars($item['patro']); ?></div>
             <div class="status">

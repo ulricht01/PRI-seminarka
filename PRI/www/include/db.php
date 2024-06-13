@@ -57,4 +57,28 @@ function infoPokoje(mysqli $conn): array
     return $data;
 }
 
+function getInfoPokoje(mysqli $conn, string $id_pokoje): array
+{
+    $id_pokoje = dbEscape($conn, $id_pokoje);
+    $query = "SELECT * FROM pokoje WHERE id_pokoje = $id_pokoje";
+    $result = dbQuery($conn, $query);
+
+    $data = [];
+    if ($result->num_rows>0){
+        while ($row = $result->fetch_assoc()){
+            $data[] = $row;
+        }
+    }
+    return $data;
+}
+
+function updateInfoRoom(mysqli $conn, string $cleaned, string $occupied, $id_pokoje){
+    $cleaned = dbEscape($conn, $cleaned);
+    $occupied = dbEscape($conn, $occupied);
+    $id_pokoje = dbEscape($conn, $id_pokoje);
+
+    $query = "UPDATE pokoje SET uklizeno=$cleaned, obsazeno=$occupied WHERE id_pokoje=$id_pokoje";
+    dbQuery($conn, $query);
+}
+
 ?>
